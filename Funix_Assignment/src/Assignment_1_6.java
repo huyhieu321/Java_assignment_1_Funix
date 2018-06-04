@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Assignment_1_6 {
-	public static void main(String[] args) {
+	public static void printLength() {
 	    String string;
 	    int lenght;
 	    Scanner scanner = new Scanner(System.in);
@@ -13,5 +13,9 @@ public class Assignment_1_6 {
 	    lenght = string.length();
 	         
 	    System.out.println("lenght = " + lenght);
+	    scanner.close();
+	}
+	public static void main(String[] args) {
+		printLength();
 	}
 }

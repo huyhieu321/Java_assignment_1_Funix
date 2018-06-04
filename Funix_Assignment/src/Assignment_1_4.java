@@ -3,12 +3,10 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Assignment_1_4 {
-	
-	public static void main(String [] args) {
-		 int node;
+	public static void reverseArray() {
+		int node;
 		LinkedList<Integer> linkedList = new LinkedList<>();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("start");
 		
 		for (int i =0; i<10;i++) {
 			System.out.printf("A[%d] =",i+1);
@@ -22,8 +20,13 @@ public class Assignment_1_4 {
 		}
 	    System.out.println("\nAfter reverse");
 	    Collections.reverse(linkedList);
+	    
 	    for (int i = 0; i < 10; i++) {
 	        System.out.print(linkedList.get(i) + "\t");
 	    }
+	    sc.close();
+	}
+	public static void main(String [] args) {
+		reverseArray();
 	}
 }

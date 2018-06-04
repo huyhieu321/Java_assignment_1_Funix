@@ -1,40 +1,37 @@
 import java.util.Scanner;
 
 public class Assignment_1_7 {
-	private static Exception illegalinputexception;
-	private static Exception illegalinputexception2;
-	private static Scanner scanner;
-
-	public static void main(String[] args) {
+	
+	public static void input() {
 	    String string_1 = null, string_2=null;
-	    scanner = new Scanner(System.in);
+	    Scanner scanner = new Scanner(System.in);
 	    boolean checkInput = true; 
 	    boolean checkInput2 = true;
 	    do {
+	    	checkInput = true;
 	         try {
 	        	 System.out.print("Input String 1: ");
 	 	   	     string_1 = scanner.nextLine();
 	             if(string_1.length() != 5) {
-	            	 illegalinputexception = null;
-					throw illegalinputexception;
+					throw  new IllegalArgumentException();
 	             }
 	 	   	     
-	         } catch (Exception illegalinputexception) {
+	         } catch (Exception IllegalArgumentException) {
 	             checkInput = false;
 	         }
 	         
 	     } while (!checkInput);
 	    
 	    do {
+	    	checkInput2 = true;
 	         try {
 	        	 System.out.print("Input String 2: ");
 	 	   	     string_2 = scanner.nextLine();
 	             if(string_2.length() != 5) {
-	            	 illegalinputexception2 = null;
-					throw illegalinputexception2;
+	            	 throw  new IllegalArgumentException();
 	             }
 	 	   	     
-	         } catch (Exception illegalinputexception) {
+	         } catch (Exception IllegalArgumentException) {
 	             checkInput2 = false;
 	         }
 	         
@@ -53,5 +50,10 @@ public class Assignment_1_7 {
 	    	}
 	    	else System.out.println("Their lengths are not equals");
 	    }
+	    scanner.close();
+	}
+
+	public static void main(String[] args) {
+		input();
 	}
 }

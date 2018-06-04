@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
 public class Assignment_1_3 {
-	private static Scanner sc;
-	private static int max;
-	
 
-	public static void main(String [] args) {
-		sc = new Scanner(System.in);
+	public static void findMaxValue() {
+		Scanner sc = new Scanner(System.in);
 		int[] numbers = new int[10];
-		max = numbers[0];
+		int max = numbers[0];
 		System.out.println("start");
 		for (int i =0; i<numbers.length;i++) {
 			System.out.printf("A[%d] =",i+1);
@@ -17,5 +14,10 @@ public class Assignment_1_3 {
 		}
 		System.out.print("Max = ");
 		System.out.println(max);
+		sc.close();
+	}
+
+	public static void main(String [] args) {
+		findMaxValue();
 	}
 }
